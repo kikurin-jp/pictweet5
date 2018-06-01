@@ -8,5 +8,9 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
      devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
   end
-end
 
+# ログイン後のリダイレクト先を指定
+  # def after_sign_in_path_for(resource)
+  #   new_tweet_path
+  # end
+end

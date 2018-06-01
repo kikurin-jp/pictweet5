@@ -12,7 +12,8 @@ class TweetsController < ApplicationController
   # end
 
   def create
-   Tweet.create(tweet_params, user_id: current_user.id)
+    # binding.pry
+   # Tweet.create(tweet_params, user_id: current_user.id)
     # name: tweet_params[:name],
 
     Tweet.create(image: tweet_params[:image], text: tweet_params[:text], user_id: current_user.id)
