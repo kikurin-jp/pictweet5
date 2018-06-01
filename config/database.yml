@@ -47,8 +47,10 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
 production:
   <<: *default
-  database: pictweet5_production
-  username: pictweet5
-  password: <%= ENV['PICTWEET5_DATABASE_PASSWORD'] %>
+  database: ~~~
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
